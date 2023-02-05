@@ -1,0 +1,39 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg,#de6262,#ffb88c);
+    overflow: hidden;
+}
+.content{
+    text-align: center;
+    width: 400px;
+    margin:auto;
+}
+.form{
+    margin:50% auto 0 auto;
+}
+
+input{
+    display: inline-block;
+    margin:10px;
+    
+}
+
+hr{
+    border:0px;
+}
+
+h1{
+    margin:20px;
+}
+
+form{
+    display: inline-block;
+    margin:auto;
+}
