@@ -2,12 +2,13 @@
     background: #f5f6fa;
     color: #9c9c9c;
     font: 1rem "PT Sans", sans-serif;
+    
   }
   
   html,
-  body,
-  .container {
-    height: 100%;
+  body,.container{
+   
+   height: 100%;
   }
   
   a {
@@ -66,4 +67,18 @@
     border: 0;
     outline: 0;
     padding: 22px 18px;
+  }
+
+  .heading{
+    position: absolute;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 6vh;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+
   }
