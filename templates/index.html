@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <title>Sentiser</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            
+        </div>
+    </nav>
+    
+    <div class="heading">
+        <h1>Sentiment Analyser</h1>
+        <h2>Lorem ipsum molestias assumenda esse ullam debitis repudiandae est!</h2>
+    </div>
+    <div class="container">
+        
+        <div class="container__item">
+            
+            <form class="form" action = "http://127.0.0.1:5000/login" method = "post">
+                <input type="url" class="form__field" placeholder="Paste The Link Here"  name="url"/>
+                <button type="submit" class="btn btn--primary btn--inside uppercase">Analyse</button>
+            </form>
+        </div>     
+    </div>
+
+
+    <div id="features">
+        <div class="feature feature1">
+            <img src="https://namelix.com/img/idea.svg" alt="idea" width="32" height="32" />
+            <h3>Get name ideas</h3>
+            <p>Namelix generates short, catchy names with a state of the art language model</p>
+        </div>
+        <div class="feature feature2">
+            <img src="img/funnel.svg" alt="funnel" width="32" height="32" />
+            <h3>Filter results</h3>
+            <p>Decide whether you prioritize a shorter name, having a specific keyword or domain extension</p>
+        </div>
+        <div class="feature feature3">
+            <img src="img/heart.svg" alt="heart" width="32" height="32" />
+            <h3>Save your names</h3>
+            <p>Our algorithm learns from the names you like, giving you better recommendations over time</p>
+        </div>
+    </div>
+
+
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'index.js') }}" >
+    </script>
+    
+</body>
+</html>
