@@ -3,15 +3,13 @@ import flask
 import json
 app = Flask(__name__)
 
-@app.route('/',methods=['POST','GET'])
+@app.route('/')
 def hello_world():
    return render_template('index.html')
 
 
-@app.route('/graph',methods=['POST','GET'])
 
-
-@app.route('/login',methods=['POST','GET'])
+@app.route('/login',methods=['POST','GET']) 
 def valid():
    if request.method == 'POST':
 
@@ -102,12 +100,10 @@ def valid():
       # Sample sentiment analysis results
 
       data = {'Emotion' : 'Count',"positive": pos_num, "negative": neg_num, "neutral": neu_num}
-      
-
-      return render_template('graph.html',data=data)
+      return render_template('index.html',data=data)
 
 if __name__ == '__main__':
     
-    
+     
    app.run(debug = True)
    

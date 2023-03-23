@@ -13,10 +13,12 @@
 <body>
     <nav>
         <div class="logo">
+
+        </div>
+        <div class="nav-items">
             
         </div>
     </nav>
-    
     <div class="heading">
         <h1>Sentiment Analyser</h1>
         <h2>Lorem ipsum molestias assumenda esse ullam debitis repudiandae est!</h2>
@@ -33,6 +35,16 @@
     </div>
 
 
+    <div style="margin: auto;width: 100vw">
+        <div id="piechart_3d"></div>
+    </div>
+
+    <div class="report-text">
+        <img src="../static/3190599.png">
+        <h4>Generated report will show here !</h4>
+    </div>
+
+
     <div id="features">
         <div class="feature feature1">
             <img src="https://namelix.com/img/idea.svg" alt="idea" width="32" height="32" />
@@ -40,20 +52,55 @@
             <p>Namelix generates short, catchy names with a state of the art language model</p>
         </div>
         <div class="feature feature2">
-            <img src="img/funnel.svg" alt="funnel" width="32" height="32" />
+            <img src="https://namelix.com/img/funnel.svg" alt="funnel" width="32" height="32" />
             <h3>Filter results</h3>
             <p>Decide whether you prioritize a shorter name, having a specific keyword or domain extension</p>
         </div>
         <div class="feature feature3">
-            <img src="img/heart.svg" alt="heart" width="32" height="32" />
+            <img src="https://namelix.com/img/heart.svg" alt="heart" width="32" height="32" />
             <h3>Save your names</h3>
             <p>Our algorithm learns from the names you like, giving you better recommendations over time</p>
         </div>
     </div>
 
 
-    <script type = "text/javascript" src = "{{ url_for('static', filename = 'index.js') }}" >
-    </script>
-    
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'index.js') }}" ></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        {% for key, value in data.items() %}
+        {% if value is string %}
+        ['{{ key }}', '{{ value }}'],
+        {% else %}
+        ['{{ key }}', {{ value }}],
+        {% endif %}
+        {% endfor %}
+        ]);
+        
+        var options = {
+        title: 'Sentiments',
+        is3D: true,
+                  //pieHole: 0.5
+        pieStartAngle: 100
+        /*slices: {  
+                    2: {offset: 0.2},
+                    3: {offset: 0.3}
+                  }*/
+        /*slices: {
+                    1: { color: 'transparent' }
+                  }*/
+        };
+        
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+        }
+        
+        </script>
+        
+        
 </body>
 </html>
