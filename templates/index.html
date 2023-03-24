@@ -8,20 +8,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-    <title>Sentiser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Sentivive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <style>
+        h3{
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
     <nav>
-        <div class="logo">
-
+        <div class="navbar">
+            <a href="">
+                <div class="logo">
+                    <img src="../static/Sentivive logo1.png"/>
+                    <h1>Sentivive</h1>
+                </div>
+    
+            </a>
+            <div class="nav-items">
+                <div class="links">
+                    <ul>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="mailto:geetesh.p@somaiya.edu,mohit.patel@somaiya.edu,harsh.amin@somaiya.edu" target="_blank">Contact</a></li>
+                        <li><a href="">Search</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="nav-button">Login</button>
+                    <button type="submit" class="nav-button">Sign up</button>
+                </div>
+            </div>
         </div>
-        <div class="nav-items">
-            
-        </div>
+        
     </nav>
     <div class="heading">
-        <h1>Sentiment Analyser</h1>
-        <h2>Lorem ipsum molestias assumenda esse ullam debitis repudiandae est!</h2>
+        <h1>YOUTUBE VIDEO SENTIMENT ANALYSER</h1>
+        <br>
+        <h2>uncover the true sentiment behind your youtube content in seconds.</h2>
+        <br>
+        <br>
     </div>
     <div class="container">
         
@@ -29,78 +62,124 @@
             
             <form class="form" action = "http://127.0.0.1:5000/login" method = "post">
                 <input type="url" class="form__field" placeholder="Paste The Link Here"  name="url"/>
-                <button type="submit" class="btn btn--primary btn--inside uppercase">Analyse</button>
+                <button type="submit" class="btn btn--primary btn--inside uppercase" id="sub" onclick="toggleDivs
+                ()">Analyse</button>
             </form>
         </div>     
     </div>
 
 
     <div style="margin: auto;width: 100vw">
-        <div id="piechart_3d"></div>
+        <div id="piechart_3d">
+           
+        </div>
     </div>
+    
 
-    <div class="report-text">
-        <img src="../static/3190599.png">
+    <div class="report-text " id= {{ dis }}>
+        <img src="../static/report logo.png">
         <h4>Generated report will show here !</h4>
     </div>
 
-
     <div id="features">
         <div class="feature feature1">
-            <img src="https://namelix.com/img/idea.svg" alt="idea" width="32" height="32" />
-            <h3>Get name ideas</h3>
-            <p>Namelix generates short, catchy names with a state of the art language model</p>
+            <i class="fa-solid fa-face-smile  i fa-2xl"></i>
+            <!-- <img src="https://fontawesome.com/icons/circle-three-quarters?f=classic&s=light" alt="idea" width="32" height="32" /> -->
+            <h3>Sentiment Analysis</h3>
+            <p>The website offers sentiment analysis of YouTube comments</p>
         </div>
         <div class="feature feature2">
-            <img src="https://namelix.com/img/funnel.svg" alt="funnel" width="32" height="32" />
-            <h3>Filter results</h3>
-            <p>Decide whether you prioritize a shorter name, having a specific keyword or domain extension</p>
+            <i class="fa-solid fa-chart-pie i fa-2xl"></i>
+
+            <!-- <img src="https://namelix.com/img/funnel.svg" alt="funnel" width="32" height="32" /> -->
+            <h3>Visualization</h3>
+            <p>The website provides dynamic and animated charts that visually represent the sentiment data. </p>
         </div>
         <div class="feature feature3">
-            <img src="https://namelix.com/img/heart.svg" alt="heart" width="32" height="32" />
-            <h3>Save your names</h3>
-            <p>Our algorithm learns from the names you like, giving you better recommendations over time</p>
+            <i class="fa-solid fa-square-poll-vertical fa-2xl"></i>
+            <!-- <img src="https://namelix.com/img/heart.svg" alt="heart" width="32" height="32" /> -->
+            <h3>Gain Insight</h3>
+            <p>Gain insights into the overall sentiment and tone surrounding a video.</p>
         </div>
     </div>
 
+     <footer>
+       
+        <div class="foo">
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+                
+            </div>
+            <div class="items">
+                <a href="" target="_blank">
+                    <img src="https://www.craiyon.com/_app/immutable/assets/discordIcon-4b44c2f9.svg" alt="Discord icon" height="32" width="32">
+                </a>
+                <a href="" target="_blank" >
+                    <img src="https://www.craiyon.com/_app/immutable/assets/facebookIcon-a98c627c.svg" alt="Facebook icon" height="32" width="32">
+                </a>
+                <a href="" target="_blank" >
+                    <img src="https://www.craiyon.com/_app/immutable/assets/instagramIcon-52055ae8.svg" alt="Instagram icon" height="32" width="32">
+                </a>
+                <a href="" target="_blank" >
+                    <img src="https://www.craiyon.com/_app/immutable/assets/twitterIcon-6593f17d.svg" alt="Twitter icon" height="32" width="32">
+                </a>
+                <a href="">
+                    <img src="https://www.craiyon.com/_app/immutable/assets/mailIcon-52b38cc3.svg" alt="Mail icon" height="32" width="32">
+    
+                </a>
+            </div>
+            <div class="support">
+                <button type="submit" class="support-button">
+                   ♥️ Support Us
+                </button>
 
-    <script type = "text/javascript" src = "{{ url_for('static', filename = 'index.js') }}" ></script>
+            </div>
+            <div class="rights">
+                <p>All rights reserved @ Group no. 11, 2023</p>
+            </div>
+        </div>
+       
+     </footer>   
+     <script>
+
+        document.getElementById("sub").addEventListener('click',()=>{
+            document.getElementById("report--text").style.display="none";
+        });
+    </script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-        
-        google.charts.load("current", {packages:["corechart"]});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-        {% for key, value in data.items() %}
-        {% if value is string %}
-        ['{{ key }}', '{{ value }}'],
-        {% else %}
-        ['{{ key }}', {{ value }}],
-        {% endif %}
-        {% endfor %}
-        ]);
-        
-        var options = {
-        title: 'Sentiments',
-        is3D: true,
-                  //pieHole: 0.5
-        pieStartAngle: 100
-        /*slices: {  
-                    2: {offset: 0.2},
-                    3: {offset: 0.3}
-                  }*/
-        /*slices: {
-                    1: { color: 'transparent' }
-                  }*/
-        };
-        
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-        }
-        
-        </script>
-        
-        
+    <script type="text/javascript">
+         
+ 
+       google.charts.load("current", {packages:["corechart"]});
+       google.charts.setOnLoadCallback(drawChart);
+       function drawChart() {
+         var data = google.visualization.arrayToDataTable([
+             {% for key, value in data.items() %}
+                 {% if value is string %}
+                     ['{{ key }}', '{{ value }}'],
+                 {% else %}
+                     ['{{ key }}', {{ value }}],
+                 {% endif %}
+             {% endfor %}
+         ]);
+
+         var options = {
+           title: 'Sentiments',
+           is3D: true,
+           pieStartAngle: 100
+           
+         };
+  
+         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+         chart.draw(data, options);
+       }
+     // Get the chart data
+
+ 
+ </script>
+ 
 </body>
 </html>
