@@ -84,7 +84,6 @@ def valid():
 
 
       #visulalising
-      import matplotlib.pyplot as plt
 
       pos_num = 0
       neg_num = 0
