@@ -12,15 +12,10 @@
     <title>Sentivive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&family=Prompt:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&family=Prompt:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
-    <style>
-        h3{
-            text-align: center;
-        }
-    </style>
-
+    
 </head>
 <body>
     <nav>
@@ -35,8 +30,8 @@
             <div class="nav-items">
                 <div class="links">
                     <ul>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="mailto:geetesh.p@somaiya.edu,mohit.patel@somaiya.edu,harsh.amin@somaiya.edu" target="_blank">Contact</a></li>
+                        <li><a href="#FAQ">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
                         <li><a href="">Search</a></li>
                         
                     </ul>
@@ -62,8 +57,7 @@
             
             <form class="form" action = "http://127.0.0.1:5000/login" method = "post">
                 <input type="url" class="form__field" placeholder="Paste The Link Here"  name="url"/>
-                <button type="submit" class="btn btn--primary btn--inside uppercase" id="sub" onclick="toggleDivs
-                ()">Analyse</button>
+                <button type="submit" class="btn btn--primary btn--inside uppercase" id="sub">Analyse</button>
             </form>
         </div>     
     </div>
@@ -71,8 +65,22 @@
 
     <div style="margin: auto;width: 100vw">
         <div id="piechart_3d">
+
+
+            <div class="programming-stats" id={{ do }}>
+            <div class="chart-container">
+                <canvas class="my-chart" style="display: block; box-sizing: border-box; height: 400px; width: 400px;" width="500" height="500"></canvas>
+            </div>
+
+            <div class="details">
+                <ul></ul>
+            </div>
+            </div>
+
            
+
         </div>
+              
     </div>
     
 
@@ -80,11 +88,10 @@
         <img src="../static/report logo.png">
         <h4>Generated report will show here !</h4>
     </div>
-
+<section id="FAQ">
     <div id="features">
         <div class="feature feature1">
             <i class="fa-solid fa-face-smile  i fa-2xl"></i>
-            <!-- <img src="https://fontawesome.com/icons/circle-three-quarters?f=classic&s=light" alt="idea" width="32" height="32" /> -->
             <h3>Sentiment Analysis</h3>
             <p>The website offers sentiment analysis of YouTube comments</p>
         </div>
@@ -103,7 +110,147 @@
         </div>
     </div>
 
-     <footer>
+    <div class="card-wrapper  | content-cc">
+        <div class="faq-card">
+      
+          <div class="faq-ilustrations">
+      
+            <!-- mobile -->
+            <img class="mobile pattern" 
+                 src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/bg-pattern-mobile.svg">
+            </img>
+            <img class="mobile ilust" 
+                 src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/illustration-woman-online-mobile.svg">
+            </img>
+            <!-- mobile -->
+          </div>
+      
+          <main class="faq-content">
+            <h1>FAQ</h1>
+      
+            <div class="faq-articles">
+      
+              <article class="faq-accordion">
+      
+                <input type="checkbox" class="tgg-title" id="tgg-title-1">
+      
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-1">
+                    <h2>What is this website about?</h2>
+                    <br>
+                    <span class="arrow-icon">
+                      <img src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+      
+                <div class="faq-accordion-content">
+                  <p>This website is about sentiment analysis of comments on YouTube videos, providing users with insights into the audience's sentiment through chart visualization.</p>
+                </div>
+      
+              </article> <!-- faq accordion -->
+      
+              <article class="faq-accordion">
+      
+                <input type="checkbox" class="tgg-title" id="tgg-title-2">
+      
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-2">
+                    <h2>
+                      What are the benefits of using this website?
+                    </h2>
+                    <br>
+                    <span class="arrow-icon">
+                      <img src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+      
+                <div class="faq-accordion-content">
+                  <p>The tool provides valuable insights into audience sentiment towards a YouTube video, which can be used to inform content creation, marketing strategies, or research questions.</p>
+                </div>
+      
+              </article> <!-- faq accordion -->
+      
+              <article class="faq-accordion">
+      
+                <input class="tgg-title" type="checkbox" id="tgg-title-3">
+      
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-3">
+                    <h2>
+                        What are some limitations?
+                    </h2>
+                    <br>
+                    <span class="arrow-icon">
+                      <img src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+      
+                <div class="faq-accordion-content">
+                  <p>The accuracy of the sentiment analysis may be affected by factors such as sarcasm, slang, or context, and the results may not reflect the entire audience.</p>
+                </div>
+      
+              </article> <!-- faq accordion -->
+      
+              <article class="faq-accordion">
+      
+                <input class="tgg-title" type="checkbox" id="tgg-title-4">
+      
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-4">
+                    <h2>
+                        How can I contact customer support?
+                    </h2>
+                    <br>
+                    <span class="arrow-icon">
+                      <img src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+      
+                <div class="faq-accordion-content">
+                  <p>
+                    To contact customer support, visit the website's "Contact Us" or "Support" page, where you may find a form to submit inquiries, an email address, or a phone number to call.</p>
+                </div>
+      
+              </article> <!-- faq accordion -->
+      
+              <article class="faq-accordion">
+      
+                <input class="tgg-title" type="checkbox" id="tgg-title-5">
+      
+                <div class="faq-accordion-title">
+                  <label for="tgg-title-5">
+                    <h2>
+                        Is the sentiment analyzer available for all YouTube videos?
+                    </h2>
+                    <span class="arrow-icon">
+                      <img src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                    </span>
+                  </label>
+                </div>
+      
+                <div class="faq-accordion-content">
+                  <p>The sentiment analyzer is available for most YouTube videos, but there may be some videos that are not compatible with the tool or have insufficient comments to generate meaningful results.</p>
+                </div>
+      
+              </article> <!-- faq accordion -->
+      
+            </div> <!-- faq articles -->
+      
+          </main> <!-- faq -->
+      
+        </div> <!-- faq card -->
+      
+      </div> <!-- card wrapper -->
+      
+
+</section>
+   
+<section id="contact">
+    <footer>
        
         <div class="foo">
             <div class="waves">
@@ -114,19 +261,19 @@
                 
             </div>
             <div class="items">
-                <a href="" target="_blank">
+                <a href="https://discord.gg/aXyMudBkMm" target="_blank">
                     <img src="https://www.craiyon.com/_app/immutable/assets/discordIcon-4b44c2f9.svg" alt="Discord icon" height="32" width="32">
                 </a>
-                <a href="" target="_blank" >
+                <a href="https://www.facebook.com/mohit.potato" target="_blank" >
                     <img src="https://www.craiyon.com/_app/immutable/assets/facebookIcon-a98c627c.svg" alt="Facebook icon" height="32" width="32">
                 </a>
-                <a href="" target="_blank" >
+                <a href="https://www.instagram.com/_amin_harsh/?hl=en" target="_blank" >
                     <img src="https://www.craiyon.com/_app/immutable/assets/instagramIcon-52055ae8.svg" alt="Instagram icon" height="32" width="32">
                 </a>
-                <a href="" target="_blank" >
+                <a href="https://twitter.com/mohit_potato" target="_blank" >
                     <img src="https://www.craiyon.com/_app/immutable/assets/twitterIcon-6593f17d.svg" alt="Twitter icon" height="32" width="32">
                 </a>
-                <a href="">
+                <a href="mailto:geetesh.p@somaiya.edu,mohit.patel@somaiya.edu,harsh.amin@somaiya.edu" target="_blank"">
                     <img src="https://www.craiyon.com/_app/immutable/assets/mailIcon-52b38cc3.svg" alt="Mail icon" height="32" width="32">
     
                 </a>
@@ -143,43 +290,56 @@
         </div>
        
      </footer>   
-     <script>
+   
+</section> 
 
-        document.getElementById("sub").addEventListener('click',()=>{
-            document.getElementById("report--text").style.display="none";
-        });
-    </script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-         
- 
-       google.charts.load("current", {packages:["corechart"]});
-       google.charts.setOnLoadCallback(drawChart);
-       function drawChart() {
-         var data = google.visualization.arrayToDataTable([
-             {% for key, value in data.items() %}
-                 {% if value is string %}
-                     ['{{ key }}', '{{ value }}'],
-                 {% else %}
-                     ['{{ key }}', {{ value }}],
-                 {% endif %}
-             {% endfor %}
-         ]);
-
-         var options = {
-           title: 'Sentiments',
-           is3D: true,
-           pieStartAngle: 100
-           
-         };
-  
-         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-         chart.draw(data, options);
-       }
-     // Get the chart data
+    
 
  
- </script>
- 
+              
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script >
+  const chartData = {
+  labels: ["Postive","Negative","Neutral"],
+  data: [{{positive}}, {{negative}}, {{neutral}}],
+};
+
+const myChart = document.querySelector(".my-chart");
+const ul = document.querySelector(".programming-stats .details ul");
+
+new Chart(myChart, {
+  type: "doughnut",
+  data: {
+    labels: chartData.labels,
+    datasets: [
+      {
+        label: "Language Popularity",
+        data: chartData.data,
+      },
+    ],
+  },
+  options: {
+    borderWidth: 10,
+    borderRadius: 2,
+    hoverBorderWidth: 0,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+const populateUl = () => {
+  chartData.labels.forEach((l, i) => {
+    let li = document.createElement("li");
+    li.innerHTML = `${l}: <span class='percentage'>${chartData.data[i]}%</span>`;
+    ul.appendChild(li);
+  });
+};
+
+populateUl();
+</script>
+
 </body>
 </html>

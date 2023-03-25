@@ -1,3 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins&family=Prompt:wght@300&display=swap');
+
+:root{
+
+  --bg-gradient: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+
+  --primary-dark-color: hsl(238, 29%, 16%);
+  --primary-soft-color: hsl(14, 88%, 65%);
+
+  --neutral-dark-color: hsl(237, 12%, 33%);
+  --neutral-soft-color: hsl(240, 6%, 50%);
+
+}
+
+
+html {
+  box-sizing: border-box;
+}
+* {box-sizing: inherit;}
+
+.attribution { 
+  font-size: 11px; text-align: center; 
+  background-color: green;
+  padding: 8px 0 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+
+
+/* global */
+
+
+.card-wrapper {
+  min-height: 100vh;
+  padding-bottom: 50px; /* footer fixed */
+  padding-top: 25px;
+}
+
+
+
+.content-cc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* FAQ card */
+
+.faq-card {
+
+  background-color: #222839;
+  border-radius: 20px;
+  width:65vw;
+  box-shadow: 0px 60px 50px -25px rgba(0, 0, 0, 0.35);
+}
+
+/* FAQ card: imagenes */
+
+
+
+.faq-ilustrations{
+  position: relative;
+}
+
+.faq-ilustrations .mobile.ilust{
+  position: absolute;
+  top:-110px;
+  left:-30px;
+  right: 0;
+}
+
+.mobile{
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* FAQ card: main */
+
+
+.faq-content {
+  padding: 9px 25px 3rem; 
+}
+
+.faq-content h1 {
+  font-size: 32px;
+  text-align: center;
+  color:white;
+
+}
+
+.faq-accordion {
+  padding: 8px 0;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+
+/* FAQ card: main title */
+
+
+/* checkbox tgg-title*/
+input.tgg-title {
+  appearance: unset;
+  all:unset;
+}
+
+.faq-accordion-title label{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.faq-accordion-title h2,.faq-accordion-title P{
+  font-size: 12px /var(--font-size);
+  font-weight: 400;
+  color:white;
+}
+
+.faq-accordion-title span{
+  margin-left: auto;
+  transition: transform .4s ease-in-out;
+}
+
+
+/* FAQ card: main content */
+
+
+.faq-accordion-content {
+  color: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .4s ease-in-out;
+  padding-bottom: 3px;
+  
+}
+
+
+/* Effects */
+
+
+/* main title, accordion title effects */
+
+.faq-accordion-title:hover h2{
+  color: rgb(0, 153,51)
+}
+
+/* onclick "" */
+.faq-accordion .tgg-title:checked + div>label>h2 {
+  font-weight: 700;
+}
+
+.faq-accordion .tgg-title:checked + div>label>span {
+  will-change: transform;
+  transform: rotate(180deg);
+}
+
+/* main content, acordion text effect */
+
+.faq-accordion .tgg-title:checked ~ .faq-accordion-content{
+  will-change: max-height;
+  max-height: 80px;
+}
+
 *{
   padding:0;
   margin:0;
@@ -17,6 +186,7 @@
   
   html,
   body{
+  scroll-behavior: smooth;
    display: flex;
    align-items:center;
    justify-content:space-between;
@@ -59,9 +229,7 @@ li a{
   text-decoration: none;
   font-size: 1em;
 }
-li a:hover{
-  color:  rgb(51, 204,51);
-}
+
 .navbar{
   width:100vw;
   display: flex;
@@ -197,6 +365,7 @@ li a:hover{
     outline: 0;
     padding: 22px 18px;
     height:5px;
+    font-family: 'Prompt', sans-serif;
   }
 
   .heading{
@@ -241,6 +410,8 @@ li a:hover{
   height: 500px;
   background-color: #222839;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
 }
 
   @media only screen and (max-width: 600px) {
@@ -408,4 +579,157 @@ footer .wave#wave4
 
 .navbar a:hover{
   color:white;
+}
+
+
+canvas{
+  width: 500px;
+  height: 70%;
+  margin:auto;
+ 
+}
+
+#chart{
+  padding-top:50px;
+  color:white;
+
+}
+
+
+.donut-chart {
+  position: relative;
+  width: 20%;
+  height: 20%;
+  margin: 0 auto;
+  transform: rotate(-90deg);
+}
+
+.slice, .fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.slice {
+  clip: rect(0, 50%, 100%, 0);
+  background-color: #eee;
+  z-index: 1;
+}
+
+.fill {
+  clip: rect(0, 50%, 100%, 0);
+  background-color: #00a0b0;
+  transform-origin: 100% 50%;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.cover {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.positive {
+  --angle: 360deg;
+}
+
+.negative {
+  --angle: 270deg;
+}
+
+.neutral {
+  --angle: 180deg;
+}
+
+@keyframes fill-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(var(--angle));
+  }
+}
+
+
+.chart-container {
+  width: 100%;
+}
+
+.programming-stats {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 8px 32px;
+  color: white;
+  transition: all 500ms ease;
+  width: 70%;
+  height: 100%;
+}
+
+.programming-stats:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+}
+
+.programming-stats .details ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+}
+
+.programming-stats .details ul li {
+  font-size: 16px;
+  margin: 12px 0;
+  text-transform: uppercase;
+  
+
+}
+
+.programming-stats .details .percentage {
+  font-weight: 700;
+  color: white;
+
+}
+
+
+#hidi{
+  display: none;
+}
+
+
+
+
+
+.links a:hover{
+  color:  rgb(51, 204,51);
+}
+
+.card-wrapper{
+  margin-top: -300px;
 }

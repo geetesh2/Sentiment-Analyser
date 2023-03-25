@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request
 import flask
-import json
 app = Flask(__name__)
 data = {}
 
 @app.route('/')
 def hello_world():
-   return render_template('index.html',data=data,dis = "hidi")
+   return render_template('index.html',do= "hidi")
 
 
 
@@ -64,7 +63,6 @@ def valid():
 
 
       #Analysing
-      nltk.download('vader_lexicon')
       from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
       polarity = []
@@ -99,9 +97,9 @@ def valid():
          elif x == "neutral":
             neu_num += 1
       # Sample sentiment analysis results
-
+      neg_num = 100 - (pos_num + neu_num)
       data = {'Emotion' : 'Count',"positive": pos_num, "negative": neg_num, "neutral": neu_num}
-   return render_template('index.html',data=data,dis = "hid")
+   return render_template('index.html',dis = "hidi",positive= pos_num,negative = neg_num, neutral = neu_num);
 
 if __name__ == '__main__':
     
