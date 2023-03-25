@@ -46,7 +46,7 @@ def valid():
       import nltk
       nltk.download('stopwords')
       from nltk.corpus import stopwords
-
+      nltk.download('vader_lexicon')
       def clean_text(text):
          text = text.lower()
          text = re.sub(r'\d+', '', text)
